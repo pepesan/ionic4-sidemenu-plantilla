@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Navegación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button [routerLink]="home" >
+    Vete a Home con Botón
+  </ion-button>
+  <ion-back-button defaultHref="/home">
+  </ion-back-button>
+  <ion-button (click)="onClick()">Navegacion programática</ion-button>
+  <ion-button (click)="onClickParam()">Navegacion con parámetros</ion-button>
+</ion-content>
