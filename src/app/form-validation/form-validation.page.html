@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FormValidation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myForm">
+
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input formControlName="firstName" type="text" [class.invalid]="!myForm.controls.firstName.valid && (myForm.controls.firstName.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="!myForm.controls.firstName.valid  && (myForm.controls.firstName.dirty || submitAttempt)">
+      <p>Please enter a valid name.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input formControlName="lastName" type="text"
+                 [class.invalid]="!myForm.controls.lastName.valid && (myForm.controls.age.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="!myForm.controls.lastName.valid  && (myForm.controls.lastName.dirty || submitAttempt)">
+      <p>Please enter a valid name.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Age</ion-label>
+      <ion-input formControlName="age" type="number" [class.invalid]="!myForm.controls.age.valid && (myForm.controls.age.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="!myForm.controls.age.valid  && (myForm.controls.age.dirty || submitAttempt)">
+      <p>Please enter a valid age.</p>
+    </ion-item>
+    <ion-button expand="full" color="primary" (click)="save()">Create Account!</ion-button>
+  </form>
+</ion-content>

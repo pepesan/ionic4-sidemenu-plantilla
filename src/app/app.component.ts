@@ -55,6 +55,11 @@ export class AppComponent {
       title: 'Infinite Scroll',
       url: '/infinite',
       icon: 'desktop'
+    },
+    {
+      title: 'Form Validation',
+      url: '/form-validation',
+      icon: 'desktop'
     }
   ];
 

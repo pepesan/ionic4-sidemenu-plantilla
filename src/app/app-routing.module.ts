@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'detail-item/:id', loadChildren: './item-detail/item-detail.module#ItemDetailPageModule' },
   { path: 'infinite', loadChildren: './infinite/infinite.module#InfinitePageModule' },
   { path: 'geo', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
-  { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' }
+  { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' },
+  { path: 'form-validation', loadChildren: './form-validation/form-validation.module#FormValidationPageModule' }
 ];
 
 @NgModule({
