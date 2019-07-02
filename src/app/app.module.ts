@@ -5,9 +5,21 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Device } from '@ionic-native/device/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {ListadoPageModule} from './listado/listado.module';
+import {InfinitePageModule} from './infinite/infinite.module';
+import {ModalPageModule} from './modal/modal.module';
+import {ItemDetailPageModule} from './item-detail/item-detail.module';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {FormularioPageModule} from './formulario/formulario.module';
+// import {GeolocationPageModule} from './geolocation/geolocation.module';
+import {DevicePageModule} from './device/device.module';
+import {GridPageModule} from './grid/grid.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,12 +27,37 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    DevicePageModule,
+    // GeolocationPageModule
+      /*
+    ListadoPageModule,
+    ItemDetailPageModule,
+    ModalPageModule,
+    InfinitePageModule,
+    HttpClientModule,
+    FormsModule,
+    FormularioPageModule,
+    ,
+    ,
+    // CameraPageModule,
+    GridPageModule
+
+       */
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Device,
+    // Geolocation
+    /*
+    ,
+    ,
+    Camera,
+    AndroidPermissions
+
+     */
   ],
   bootstrap: [AppComponent]
 })

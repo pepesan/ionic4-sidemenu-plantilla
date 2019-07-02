@@ -18,6 +18,9 @@ const routes: Routes = [
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
   { path: 'toolbar', loadChildren: './toolbar/toolbar.module#ToolbarPageModule' },
   { path: 'navegacion', loadChildren: './navegacion/navegacion.module#NavegacionPageModule' },
+  { path: 'device', loadChildren: './device/device.module#DevicePageModule' },
+  { path: 'form', loadChildren: './formulario/formulario.module#FormularioPageModule' },
+  { path: 'geo', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
   { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' }
 ];
 

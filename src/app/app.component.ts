@@ -19,6 +19,22 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Device',
+      url: '/device',
+      icon: 'desktop'
+    },
+    {
+      title: 'Formulario',
+      url: '/form',
+      icon: 'desktop'
+    }
+    ,
+    {
+      title: 'Geolocation',
+      url: '/geo',
+      icon: 'desktop'
     }
   ];
 
