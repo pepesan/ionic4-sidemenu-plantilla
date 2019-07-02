@@ -21,7 +21,6 @@ const routes: Routes = [
   { path: 'device', loadChildren: './device/device.module#DevicePageModule' },
   { path: 'form', loadChildren: './formulario/formulario.module#FormularioPageModule' },
   { path: 'grid', loadChildren: './grid/grid.module#GridPageModule' },
-  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
   { path: 'listado', loadChildren: './listado/listado.module#ListadoPageModule' },
   { path: 'detail-item/:id', loadChildren: './item-detail/item-detail.module#ItemDetailPageModule' },
   { path: 'infinite', loadChildren: './infinite/infinite.module#InfinitePageModule' },

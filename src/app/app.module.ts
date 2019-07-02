@@ -20,7 +20,6 @@ import {FormularioPageModule} from './formulario/formulario.module';
 import {GeolocationPageModule} from './geolocation/geolocation.module';
 import {DevicePageModule} from './device/device.module';
 import {GridPageModule} from './grid/grid.module';
-import {ListPageModule} from './list/list.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,11 +35,12 @@ import {ListPageModule} from './list/list.module';
     ItemDetailPageModule,
     FormularioPageModule,
     HttpClientModule,
-    InfinitePageModule
+    InfinitePageModule,
+    ModalPageModule
       /*
     ,
     ,
-    ModalPageModule,
+    ,
     ,
     ,
     FormsModule,
