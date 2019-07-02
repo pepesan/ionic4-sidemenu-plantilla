@@ -30,15 +30,18 @@ import {GridPageModule} from './grid/grid.module';
     AppRoutingModule,
     DevicePageModule,
     GeolocationPageModule,
-    GridPageModule
-      /*
+    GridPageModule,
     ListadoPageModule,
     ItemDetailPageModule,
+    FormularioPageModule
+      /*
+    ,
+    ,
     ModalPageModule,
     InfinitePageModule,
     HttpClientModule,
     FormsModule,
-    FormularioPageModule,
+    ,
     ,
     ,
     // CameraPageModule,

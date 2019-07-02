@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from '@ionic/angular';
+import {ActivatedRoute} from '@angular/router';
 
 /**
  * Generated class for the ItemDetailPage page.
@@ -8,10 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage({
-  name: 'item',
-  segment: 'item/:item'
-})
+
 @Component({
   selector: 'page-item-detail',
   templateUrl: 'item-detail.html',
@@ -19,10 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ItemDetailPage {
   item;
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams) {
-    this.item = this.navParams.get("item")
-    console.log(this.item)
+      private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      this.item = params.id;
+    });
   }
 
   ionViewDidLoad() {

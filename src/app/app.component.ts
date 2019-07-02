@@ -40,6 +40,16 @@ export class AppComponent {
       title: 'Grid',
       url: '/grid',
       icon: 'desktop'
+    },
+    {
+      title: 'Listado',
+      url: '/listado',
+      icon: 'desktop'
+    },
+    {
+      title: 'Item Detail',
+      url: '/item-detail/detalle',
+      icon: 'desktop'
     }
   ];
 

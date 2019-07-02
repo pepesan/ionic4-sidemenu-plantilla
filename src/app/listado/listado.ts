@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from '@ionic/angular';
+import {Router} from '@angular/router';
 
 /**
  * Generated class for the ListadoPage page.
@@ -8,10 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage({
-  name: 'listado',
-  segment: 'listado'
-})
+
 @Component({
   selector: 'page-listado',
   templateUrl: 'listado.html',
@@ -19,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ListadoPage {
 
   items;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public router: Router) {
     this.items = [
       'Pokémon Yellow',
       'Super Metroid',
@@ -45,8 +43,9 @@ export class ListadoPage {
     console.log('ionViewDidLoad ListadoPage');
   }
   itemSelected(item: string) {
-    console.log("Selected Item", item);
-    this.navCtrl.push('item',{ item: item})
+    console.log('Selected Item', item);
+    this.router.navigateByUrl('/detail-item/' + item);
+    // this.navCtrl.push('item',{ item: item});
   }
 
 }
