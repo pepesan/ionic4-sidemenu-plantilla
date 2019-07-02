@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the GridPage page.
@@ -8,17 +7,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage({
-  name: 'grid',
-  segment: 'ejemplo-grid'
-})
+
 @Component({
   selector: 'page-grid',
   templateUrl: 'grid.html',
 })
 export class GridPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor() {
   }
 
   ionViewDidLoad() {

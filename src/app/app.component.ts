@@ -35,6 +35,11 @@ export class AppComponent {
       title: 'Geolocation',
       url: '/geo',
       icon: 'desktop'
+    },
+    {
+      title: 'Grid',
+      url: '/grid',
+      icon: 'desktop'
     }
   ];
 
