@@ -60,6 +60,11 @@ export class AppComponent {
       title: 'Form Validation',
       url: '/form-validation',
       icon: 'desktop'
+    },
+    {
+      title: 'Listado Partidos Rest',
+      url: '/partidos',
+      icon: 'desktop'
     }
   ];
 

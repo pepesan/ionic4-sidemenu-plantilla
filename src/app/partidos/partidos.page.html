@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Listado Partidos vía Rest
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Resultados
+    </ion-list-header>
+    <ion-item *ngFor="let p of listado" (click)="muestraResultado(p)">
+
+      <ion-avatar slot="start">
+        <img [src]="urlbase+p.imagen"/>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{p.nombre}}</h2>
+        <h3>Diputados: {{p.dipu}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
