@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
   { path: 'listado', loadChildren: './listado/listado.module#ListadoPageModule' },
   { path: 'detail-item/:id', loadChildren: './item-detail/item-detail.module#ItemDetailPageModule' },
+  { path: 'infinite', loadChildren: './infinite/infinite.module#InfinitePageModule' },
   { path: 'geo', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
   { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' }
 ];

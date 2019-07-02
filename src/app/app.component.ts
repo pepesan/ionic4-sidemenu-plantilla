@@ -50,6 +50,11 @@ export class AppComponent {
       title: 'Item Detail',
       url: '/item-detail/detalle',
       icon: 'desktop'
+    },
+    {
+      title: 'Infinite Scroll',
+      url: '/infinite',
+      icon: 'desktop'
     }
   ];
 

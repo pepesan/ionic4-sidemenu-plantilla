@@ -1,13 +1,26 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
 import { InfinitePage } from './infinite';
+import {RouterModule, Routes} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {IonicModule} from '@ionic/angular';
 
+
+const routes: Routes = [
+  {
+    path: '',
+    component: InfinitePage
+  }
+];
 @NgModule({
   declarations: [
     InfinitePage,
   ],
   imports: [
-    IonicPageModule.forChild(InfinitePage),
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild(routes)
   ],
 })
 export class InfinitePageModule {}

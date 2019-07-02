@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -11,10 +10,6 @@ import 'rxjs/add/operator/map';
  * Ionic pages and navigation.
  */
 
-@IonicPage({
-  name: 'infinite',
-  segment: 'infinite'
-})
 @Component({
   selector: 'page-infinite',
   templateUrl: 'infinite.html',
@@ -28,10 +23,7 @@ export class InfinitePage {
   totalData;
   totalPage;
   errorMessage;
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public http: HttpClient) {
+  constructor(public http: HttpClient) {
     this.getUsers(this.page).subscribe(
       res => {
         console.log(res);
