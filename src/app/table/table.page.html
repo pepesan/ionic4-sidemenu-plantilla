@@ -10,11 +10,61 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-title>Ejemplo básico</ion-title>
     <ngx-datatable
             [rows]="rows"
             [columns]="columns"
 
     >
     </ngx-datatable>
+  <ion-title>Limit 2 Paginado</ion-title>
+  <ngx-datatable
+          [rows]="rows"
+          [columns]="columns"
+          limit="2"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+  >
+  </ngx-datatable>
+  <ion-title>Filtrado</ion-title>
+  <input #search
+          type="text"
+          style="padding:8px;margin:15px auto;width:30%;"
+          placeholder="Type to filter the name column..."
+          (keyup)="updateFilter(search.value)"
+  />
+  <ngx-datatable
+          #table
+          class="material"
+          [columns]="columns"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [limit]="2"
+          [rows]="rows2"
+  >
+  </ngx-datatable>
+  <ion-title>Listado Rest</ion-title>
+  <input #search2
+         type="text"
+         style="padding:8px;margin:15px auto;width:30%;"
+         placeholder="Type to filter the name column..."
+         (keyup)="updateFilter2(search2.value)"
+  />
+  <ngx-datatable
+          #table2
+          class="material"
+          [loadingIndicator]="loading"
+          [columns]="columnasListado"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [limit]="2"
+          [rows]="listado"
+  >
+  </ngx-datatable>
 </ion-content>

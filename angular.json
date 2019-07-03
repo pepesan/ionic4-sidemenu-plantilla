@@ -40,7 +40,10 @@
               },
               {
                 "input": "src/app/app.scss"
-              }
+              },
+              "node_modules/@swimlane/ngx-datatable/release/assets/app.css",
+              "node_modules/@swimlane/ngx-datatable/release/themes/material.css",
+              "node_modules/@swimlane/ngx-datatable/release/assets/icons.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
