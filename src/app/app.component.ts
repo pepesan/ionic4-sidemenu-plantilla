@@ -65,6 +65,11 @@ export class AppComponent {
       title: 'Listado Partidos Rest',
       url: '/partidos',
       icon: 'desktop'
+    },
+    {
+      title: 'Datatable',
+      url: '/table',
+      icon: 'desktop'
     }
   ];
 

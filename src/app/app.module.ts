@@ -37,7 +37,7 @@ import {PartidosModuleModule} from './partidos-module/partidos-module.module';
     HttpClientModule,
     InfinitePageModule,
     ModalPageModule,
-      PartidosModuleModule
+    PartidosModuleModule
       /*
     ,
     ,

@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' },
   { path: 'form-validation', loadChildren: './form-validation/form-validation.module#FormValidationPageModule' },
   { path: 'partidos', loadChildren: './partidos/partidos.module#PartidosPageModule' },
-  { path: 'partidos-show/:nombre', loadChildren: './partidos-show/partidos-show.module#PartidosShowPageModule' }
+  { path: 'partidos-show/:nombre', loadChildren: './partidos-show/partidos-show.module#PartidosShowPageModule' },
+  { path: 'table', loadChildren: './table/table.module#TablePageModule' }
 ];
 
 @NgModule({
