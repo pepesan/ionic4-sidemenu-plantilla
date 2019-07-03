@@ -21,7 +21,6 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    PartidosModuleModule,
     RouterModule.forChild(routes)
   ],
   declarations: [PartidosShowPage]

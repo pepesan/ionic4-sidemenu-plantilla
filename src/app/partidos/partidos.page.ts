@@ -17,14 +17,15 @@ export class PartidosPage implements OnInit {
   ngOnInit() {
     this.partidosService.getData().subscribe( data => {
       this.listado = data;
-      console.log(data);
+      // console.log(data);
       this.partidosService.setListado(data);
+      // console.log(this.partidosService.getListado());
     });
 
   }
 
   muestraResultado(p: Partido) {
-    console.log(p);
+    // console.log(p);
     this.router.navigateByUrl('/partidos-show/' + p.nombre);
   }
 }

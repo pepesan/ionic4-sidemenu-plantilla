@@ -15,11 +15,11 @@ import {InfinitePageModule} from './infinite/infinite.module';
 import {ModalPageModule} from './modal/modal.module';
 import {ItemDetailPageModule} from './item-detail/item-detail.module';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
 import {FormularioPageModule} from './formulario/formulario.module';
 import {GeolocationPageModule} from './geolocation/geolocation.module';
 import {DevicePageModule} from './device/device.module';
 import {GridPageModule} from './grid/grid.module';
+import {PartidosModuleModule} from './partidos-module/partidos-module.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +36,8 @@ import {GridPageModule} from './grid/grid.module';
     FormularioPageModule,
     HttpClientModule,
     InfinitePageModule,
-    ModalPageModule
+    ModalPageModule,
+      PartidosModuleModule
       /*
     ,
     ,

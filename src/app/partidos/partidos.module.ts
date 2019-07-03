@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { PartidosPage } from './partidos.page';
 import {PartidosService} from '../partidos-module/partidos.service';
-import {HttpClientModule} from '@angular/common/http';
 import {PartidosModuleModule} from '../partidos-module/partidos-module.module';
 
 const routes: Routes = [
@@ -22,13 +21,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    HttpClientModule,
-    PartidosModuleModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PartidosPage],
-  providers: [
-      PartidosService
-  ]
+  declarations: [PartidosPage]
 })
 export class PartidosPageModule {}

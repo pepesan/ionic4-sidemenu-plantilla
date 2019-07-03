@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from '@ionic/angular';
 import {ActivatedRoute} from '@angular/router';
 
-/**
- * Generated class for the ItemDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 
 @Component({

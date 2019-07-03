@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {PartidosModuleModule} from './partidos-module/partidos-module.module';
 
 const routes: Routes = [
   {
