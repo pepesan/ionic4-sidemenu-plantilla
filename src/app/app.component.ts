@@ -70,6 +70,11 @@ export class AppComponent {
       title: 'Datatable',
       url: '/table',
       icon: 'desktop'
+    },
+    {
+      title: 'Cámara',
+      url: '/camara',
+      icon: 'desktop'
     }
   ];
 

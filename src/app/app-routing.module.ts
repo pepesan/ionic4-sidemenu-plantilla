@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'form-validation', loadChildren: './form-validation/form-validation.module#FormValidationPageModule' },
   { path: 'partidos', loadChildren: './partidos/partidos.module#PartidosPageModule' },
   { path: 'partidos-show/:nombre', loadChildren: './partidos-show/partidos-show.module#PartidosShowPageModule' },
-  { path: 'table', loadChildren: './table/table.module#TablePageModule' }
+  { path: 'table', loadChildren: './table/table.module#TablePageModule' },
+  { path: 'camara', loadChildren: './camara/camara.module#CamaraPageModule' }
 ];
 
 @NgModule({
