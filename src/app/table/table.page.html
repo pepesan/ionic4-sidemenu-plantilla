@@ -66,5 +66,10 @@
           [limit]="2"
           [rows]="listado"
   >
+    <ngx-datatable-column name="Acciones" [resizeable]="false" sortable="false">
+      <ng-template #addButton let-row="row" let-button="column.button">
+        <ion-button (click)="muestraPartido(row)">Show</ion-button>
+      </ng-template>
+    </ngx-datatable-column>
   </ngx-datatable>
 </ion-content>

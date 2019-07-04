@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {DatatableComponent} from '@swimlane/ngx-datatable';
 import {PartidosService} from '../partidos-module/partidos.service';
-
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-table',
   templateUrl: './table.page.html',
@@ -26,7 +26,8 @@ export class TablePage implements OnInit {
   temp = [];
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
-  constructor(public partidosService: PartidosService) {
+  constructor(public partidosService: PartidosService,
+              public alertController: AlertController) {
     this.temp = [...this.rows2];
   }
   ngOnInit() {
@@ -36,7 +37,8 @@ export class TablePage implements OnInit {
       this.columnasListado = [
         { name: 'Nombre' },
         { name: 'Dipu' },
-        { name: 'Imagen' }
+        { name: 'Imagen' },
+        { name: '', cellTemplate: this.addButton, sortable: false}
       ];
       this.loading = false;
     });
@@ -61,7 +63,8 @@ export class TablePage implements OnInit {
   columnasListado = [];
   modelSearch = '';
   loading = true;
-  updateFilter2(value: string) {
+  @ViewChild('addButton') addButton: TemplateRef<any>;
+ updateFilter2(value: string) {
     // console.log(value);
     // filter our data
     // console.log(this.listadoTemporal);
@@ -75,5 +78,17 @@ export class TablePage implements OnInit {
     this.listado = temp;
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
+  }
+
+
+  async muestraPartido(row) {
+    const alert = await this.alertController.create({
+      header: 'Partido: ' + row.nombre,
+      subHeader: 'Número de Diputados: ' + row.dipu,
+      message: '<img src="http://cursosdedesarrollo.com/pactometro/img/' + row.imagen + '"/>',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 }
