@@ -66,6 +66,26 @@
           [limit]="2"
           [rows]="listado"
   >
+  </ngx-datatable>
+  <ion-title>Listado Rest con Botones</ion-title>
+  <input #search2
+         type="text"
+         style="padding:8px;margin:15px auto;width:30%;"
+         placeholder="Type to filter the name column..."
+         (keyup)="updateFilter2(search2.value)"
+  />
+  <ngx-datatable
+          #table3
+          class="material"
+          [loadingIndicator]="loading"
+          [columns]="columnasListado2"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [limit]="2"
+          [rows]="listado"
+  >
     <ngx-datatable-column name="Acciones" [resizeable]="false" sortable="false">
       <ng-template #addButton let-row="row" let-button="column.button">
         <ion-button (click)="muestraPartido(row)">Show</ion-button>

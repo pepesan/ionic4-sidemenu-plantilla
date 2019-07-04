@@ -9,11 +9,44 @@
 
     <ion-item>
       <ion-label position="floating">First Name</ion-label>
-      <ion-input formControlName="firstName" type="text" [class.invalid]="!myForm.controls.firstName.valid && (myForm.controls.firstName.dirty || submitAttempt)"></ion-input>
+      <ion-input formControlName="firstName"
+                 type="text"
+                 [class.invalid]="!myForm.controls.firstName.valid && (myForm.controls.firstName.dirty || submitAttempt)"
+      ></ion-input>
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.errors">
+      {{myForm.controls.firstName.errors | json}}
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.invalid">
+      Invalid
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.valid">
+      Valid
     </ion-item>
 
-    <ion-item *ngIf="!myForm.controls.firstName.valid  && (myForm.controls.firstName.dirty || submitAttempt)">
-      <p>Please enter a valid name.</p>
+    <ion-item *ngIf="myForm.controls.firstName.pristine">
+      Pristine
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.dirty">
+      Dirty
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.untouched">
+      Untouched
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.touched">
+      Touched
+    </ion-item>
+    <ion-item *ngIf="myForm.controls.firstName.invalid  && myForm.controls.firstName.touched">
+      <div [hidden]="!myForm.controls.firstName?.errors?.required">
+        <p>El campo firstname es obligatorio</p>
+      </div>
+      <div [hidden]="!myForm.controls.firstName?.errors?.minlength">
+        <p>El campo firstName debe tener un mínimo de 4 caracteres</p>
+      </div>
+      <div [hidden]="!myForm.controls.firstName?.errors?.pattern">
+        <p>El campo firstName sólo debe de contener letras.</p>
+      </div>
+
     </ion-item>
 
     <ion-item>

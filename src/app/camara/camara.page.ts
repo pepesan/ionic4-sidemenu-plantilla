@@ -7,6 +7,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class CamaraPage implements OnInit {
   base64Image;
+  fotoTomada = false;
   constructor(private camera: Camera) { }
 
   ngOnInit() {
@@ -15,7 +16,7 @@ export class CamaraPage implements OnInit {
   tomaFoto() {
     const options: CameraOptions = {
       quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
+      destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
     };
@@ -24,6 +25,7 @@ export class CamaraPage implements OnInit {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       this.base64Image = 'data:image/jpeg;base64,' + imageData;
+      this.fotoTomada = true;
     }, (err) => {
       // Handle error
       console.log('Va a ser que no hay foto');

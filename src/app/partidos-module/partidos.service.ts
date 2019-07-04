@@ -5,7 +5,7 @@ import {Partido} from './partido';
   providedIn: 'root'
 })
 export class PartidosService {
-  url = 'http://cursosdedesarrollo.com/pactometro/resultados.json';
+  url = 'https://cursosdedesarrollo.com/pactometro/resultados.json';
   listado: Partido[];
   constructor(public httpClient: HttpClient) {
     console.log('Iniciando Servicio');

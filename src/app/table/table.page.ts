@@ -34,7 +34,12 @@ export class TablePage implements OnInit {
     this.partidosService.getData().subscribe( data => {
       this.listado = data;
       this.listadoTemporal = [...this.listado];
-      this.columnasListado = [
+        this.columnasListado = [
+            { name: 'Nombre' },
+            { name: 'Dipu' },
+            { name: 'Imagen' }
+          ];
+      this.columnasListado2 = [
         { name: 'Nombre' },
         { name: 'Dipu' },
         { name: 'Imagen' },
@@ -91,4 +96,6 @@ export class TablePage implements OnInit {
 
     await alert.present();
   }
+  @ViewChild(DatatableComponent) table3: DatatableComponent;
+ columnasListado2;
 }

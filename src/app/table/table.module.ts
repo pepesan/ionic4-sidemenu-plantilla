@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TablePage } from './table.page';
-import {PartidosModuleModule} from '../partidos-module/partidos-module.module';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 const routes: Routes = [

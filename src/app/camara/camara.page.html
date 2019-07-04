@@ -12,5 +12,5 @@
 <ion-content>
 
 <ion-button (click)="tomaFoto()">Foto</ion-button>
-<p><img [src]="base64Image"/></p>
+<p><img *ngIf="fotoTomada" [src]="base64Image"/></p>
 </ion-content>
