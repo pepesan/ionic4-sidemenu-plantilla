@@ -16,8 +16,8 @@
 </ion-header>
 
 
-<ion-content padding>
-  <form #myForm="ngForm" (submit)="logForm()">
+<ion-content class="ion-padding">
+  <form #myForm="ngForm" (submit)="logForm(myForm)">
     <ion-item>
       <ion-label>Todo</ion-label>
       <ion-input #title type="text" [(ngModel)]="todo.title"

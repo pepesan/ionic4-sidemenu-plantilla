@@ -21,13 +21,14 @@ export class FormularioPage {
   resetTodo() {
     this.todo = {
       title : '',
-        description: ''
+      description: ''
     };
   }
-  logForm() {
+  logForm(myForm) {
     console.log(this.todo);
     this.todos.push(this.todo);
     this.resetTodo();
+    myForm.reset();
   }
   itemSelected(item) {
     console.log(item);
