@@ -16,4 +16,8 @@ export class HomePage {
     });
     return await modal.present();
   }
+
+    error(error) {
+        console.log('error de carga de imagen' + error);
+    }
 }

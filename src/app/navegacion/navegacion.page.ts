@@ -19,7 +19,7 @@ export class NavegacionPage implements OnInit {
     this.router.navigateByUrl('/home');
   }
 
-  onClickParam() {
-    this.router.navigateByUrl('/ruta-parametro/param');
-  }
+    onClickParam() {
+      this.router.navigateByUrl('/ruta-parametro/param');
+    }
 }
