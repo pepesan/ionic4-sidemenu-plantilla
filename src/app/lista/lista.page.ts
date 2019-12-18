@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {Cliente} from './cliente';
+import {ClienteService} from './cliente.service';
 
 @Component({
   selector: 'app-lista',
@@ -7,18 +9,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./lista.page.scss'],
 })
 export class ListaPage implements OnInit {
-  listado: string[] = [];
-  constructor(public router: Router) {
-    this.listado = [
-        'uno',
-        'dos'
-    ];
+  listado: Cliente[] = [];
+  constructor(public router: Router, public clienteService: ClienteService) {
+    this.listado = this.clienteService.listado;
   }
 
   ngOnInit() {
   }
 
-  salta(item: string) {
-    this.router.navigateByUrl('/detalle/' + item);
+  salta(item: Cliente) {
+    this.router.navigateByUrl('/detalle/' + item.id);
   }
 }

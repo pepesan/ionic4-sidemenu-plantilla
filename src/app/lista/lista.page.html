@@ -1,13 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Listado
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of listado" (click)="salta(item)">
-      {{item}}
+    <ion-item
+            *ngFor="let item of listado"
+            (click)="salta(item)">
+      {{item.id}}: {{item.name}}
     </ion-item>
   </ion-list>
 

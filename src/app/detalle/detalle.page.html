@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Listado
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h2>{{item}}</h2>
+  <h2>id: {{id}}</h2>
+  <h2>cliente.id: {{cliente.id}}</h2>
+  <h2>cliente.name: {{cliente.name}}</h2>
 </ion-content>

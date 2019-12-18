@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'table', loadChildren: './table/table.module#TablePageModule' },
   { path: 'camara', loadChildren: './camara/camara.module#CamaraPageModule' },
   { path: 'lista', loadChildren: './lista/lista.module#ListaPageModule' },
-  { path: 'detalle/:nombre', loadChildren: './detalle/detalle.module#DetallePageModule' }
+  { path: 'detalle/:id', loadChildren: './detalle/detalle.module#DetallePageModule' }
 ];
 
 @NgModule({
