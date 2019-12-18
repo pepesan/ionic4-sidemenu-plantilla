@@ -31,7 +31,9 @@ const routes: Routes = [
   { path: 'partidos', loadChildren: './partidos/partidos.module#PartidosPageModule' },
   { path: 'partidos-show/:nombre', loadChildren: './partidos-show/partidos-show.module#PartidosShowPageModule' },
   { path: 'table', loadChildren: './table/table.module#TablePageModule' },
-  { path: 'camara', loadChildren: './camara/camara.module#CamaraPageModule' }
+  { path: 'camara', loadChildren: './camara/camara.module#CamaraPageModule' },
+  { path: 'lista', loadChildren: './lista/lista.module#ListaPageModule' },
+  { path: 'detalle/:nombre', loadChildren: './detalle/detalle.module#DetallePageModule' }
 ];
 
 @NgModule({

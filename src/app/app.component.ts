@@ -80,6 +80,11 @@ export class AppComponent {
       title: 'Cámara',
       url: '/camara',
       icon: 'desktop'
+    },
+    {
+      title: 'Ejercicio Lista',
+      url: '/lista',
+      icon: 'desktop'
     }
   ];
 
