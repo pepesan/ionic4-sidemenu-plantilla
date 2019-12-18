@@ -24,7 +24,7 @@ export class TablePage implements OnInit {
     { name: 'company' }
   ];
   temp = [];
-  @ViewChild(DatatableComponent) table: DatatableComponent;
+  @ViewChild(DatatableComponent, { static: true }) table: DatatableComponent;
 
   constructor(public partidosService: PartidosService,
               public alertController: AlertController) {
@@ -61,14 +61,14 @@ export class TablePage implements OnInit {
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
-  @ViewChild(DatatableComponent) table2: DatatableComponent;
+  @ViewChild(DatatableComponent, { static: true }) table2: DatatableComponent;
 
   listado;
   listadoTemporal;
   columnasListado = [];
   modelSearch = '';
   loading = true;
-  @ViewChild('addButton') addButton: TemplateRef<any>;
+  @ViewChild('addButton', { static: true }) addButton: TemplateRef<any>;
  updateFilter2(value: string) {
     // console.log(value);
     // filter our data
@@ -96,6 +96,6 @@ export class TablePage implements OnInit {
 
     await alert.present();
   }
-  @ViewChild(DatatableComponent) table3: DatatableComponent;
+  @ViewChild(DatatableComponent, { static: true }) table3: DatatableComponent;
  columnasListado2;
 }
