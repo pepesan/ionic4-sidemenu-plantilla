@@ -12,7 +12,7 @@ export class ItemDetailPage {
   constructor(
       private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
-      this.item = params.id;
+      this.item = params.nombre;
     });
   }
 

@@ -47,6 +47,11 @@ export class AppComponent {
       icon: 'desktop'
     },
     {
+      title: 'Modal',
+      url: '/modal',
+      icon: 'desktop'
+    },
+    {
       title: 'Item Detail',
       url: '/item-detail/detalle',
       icon: 'desktop'

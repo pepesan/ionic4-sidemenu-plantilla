@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'form', loadChildren: './formulario/formulario.module#FormularioPageModule' },
   { path: 'grid', loadChildren: './grid/grid.module#GridPageModule' },
   { path: 'listado', loadChildren: './listado/listado.module#ListadoPageModule' },
-  { path: 'detail-item/:id', loadChildren: './item-detail/item-detail.module#ItemDetailPageModule' },
+  { path: 'detail-item/:nombre', loadChildren: './item-detail/item-detail.module#ItemDetailPageModule' },
   { path: 'infinite', loadChildren: './infinite/infinite.module#InfinitePageModule' },
   { path: 'geo', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
   { path: 'ruta-parametro/:id', loadChildren: './ruta-parametro/ruta-parametro.module#RutaParametroPageModule' },
