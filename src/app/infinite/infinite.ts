@@ -58,7 +58,7 @@ export class InfinitePage {
     return Observable.throw(errMsg);
   }
   doInfinite(infiniteScroll) {
-    this.page = this.page+1;
+    this.page = this.page + 1;
     setTimeout(() => {
       this.getUsers(this.page)
         .subscribe(
@@ -74,7 +74,7 @@ export class InfinitePage {
           error =>  this.errorMessage = <any>error);
 
       console.log('Async operation has ended');
-      infiniteScroll.complete();
+      infiniteScroll.target.complete();
     }, 1000);
   }
 }
